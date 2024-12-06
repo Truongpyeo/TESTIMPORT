@@ -1,0 +1,38 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "buttonColor": "#ffffff",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconName": "geolocation",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "k68f9q9pb1",
+  "leftColumn": 0,
+  "minWidth": 50,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 5,
+  "mobileRightColumn": 9,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 5.123952746391296,
+  "parentId": "2p10t6308m",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 9,
+  "topRow": 1,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "9oi0aefsqi",
+  "widgetName": "icon"
+}

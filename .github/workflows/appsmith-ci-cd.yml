@@ -1,0 +1,40 @@
+name: Appsmith CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14.x'
+        
+    - name: Install Dependencies
+      run: npm install
+      
+    - name: Run Tests
+      run: npm test
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Deploy to Appsmith Cloud
+      uses: appsmithorg/appsmith-git-sync@v1
+      with:
+        appsmith-server-url: ${{ secrets.APPSMITH_SERVER_URL }}
+        access-token: ${{ secrets.APPSMITH_ACCESS_TOKEN }}
+        branch: main 

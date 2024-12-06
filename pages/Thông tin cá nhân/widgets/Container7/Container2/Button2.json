@@ -1,0 +1,49 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 19,
+  "boxShadow": "none",
+  "buttonColor": "#3f3f46",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "st4dx1oxef",
+  "leftColumn": 10,
+  "minWidth": 120,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 11,
+  "mobileRightColumn": 27,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "onClick": "{{removeValue('id_nhan_luc').then(() => {\n  showAlert('Đăng xuất thành công!', 'success');\n  navigateTo('Đăng nhập', {}, 'SAME_WINDOW');\n});}}",
+  "originalBottomRow": 19,
+  "originalTopRow": 15,
+  "parentColumnSpace": 6.21875,
+  "parentId": "skvcqvy4gb",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 55,
+  "text": "Đăng Xuất",
+  "topRow": 15,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ffn6flmaka",
+  "widgetName": "Button2"
+}
