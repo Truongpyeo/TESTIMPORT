@@ -22,6 +22,7 @@ Tất cả những thay đổi đáng chú ý của dự án sẽ được ghi l
 
 ### Changed
 - Cải thiện cấu trúc code và comments
+- Sửa lỗi CI/CD workflow với Appsmith CLI
 - Tối ưu quy trình deployment
 
 ## [1.0.0] - 2024-12-05

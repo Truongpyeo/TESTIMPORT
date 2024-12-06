@@ -32,9 +32,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Deploy to Appsmith Cloud
-      uses: appsmithorg/appsmith-git-sync@v1
-      with:
-        appsmith-server-url: ${{ secrets.APPSMITH_SERVER_URL }}
-        access-token: ${{ secrets.APPSMITH_ACCESS_TOKEN }}
-        branch: main 
+    - name: Install Appsmith CLI
+      run: npm install -g @appsmith/cli
+      
+    - name: Deploy to Appsmith
+      run: |
+        appsmith login --access-token ${{ secrets.APPSMITH_ACCESS_TOKEN }}
+        appsmith deploy --server-url ${{ secrets.APPSMITH_SERVER_URL }}
+      env:
+        APPSMITH_ACCESS_TOKEN: ${{ secrets.APPSMITH_ACCESS_TOKEN }}
+        APPSMITH_SERVER_URL: ${{ secrets.APPSMITH_SERVER_URL }}
